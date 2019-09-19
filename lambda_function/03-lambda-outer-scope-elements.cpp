@@ -8,7 +8,7 @@ int main() {
     int arr[] = { 1, 2, 3, 4, 5 };
     int mul = 5;
 
-    //accessing outer scope element: pass by reference
+    //passing outer scope element: pass by reference
     for_each(arr, arr + sizeof(arr) / sizeof(int), [&](int x) {
         cout<< x <<" ";
         // Can modify the mul inside this lambda function because
@@ -18,7 +18,7 @@ int main() {
 
     cout <<"mul = " << mul << endl;
 
-    //accessing outer scope element: pass by value
+    //passing outer scope element: pass by value
     for_each(arr, arr + sizeof(arr) / sizeof(int), [=](int x) {
         x = x * mul;
         cout<< x <<" ";
