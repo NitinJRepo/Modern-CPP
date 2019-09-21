@@ -17,7 +17,7 @@ public:
 	{
 		// Capturing member variable by value will not work
         // Will result in Compile Error
-		for_each(vec.begin(), vec.end(), [mCounter](int element){
+		for_each(vec.begin(), vec.end(), [this](int element){
 			if(element % 2)
 				mCounter++; // Accessing member variable from outer scope
 		});
